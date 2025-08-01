@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data.Common;
 using UnityEngine;
 
 public enum PlayerState
@@ -22,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 targetPosition;
 
     private bool isMoving;
-    [SerializeField] private PlayerState currentState;
+    private PlayerState currentState;
 
     private void Start()
     {
@@ -43,6 +39,12 @@ public class PlayerController : MonoBehaviour
             MoveStep(Vector2.down);
             return;
         }
+
+        SetInput();
+    }
+
+    private void SetInput()
+    {
         if (Input.GetKeyDown(KeyCode.D)) Move(Vector2.right);
         if (Input.GetKeyDown(KeyCode.A)) Move(Vector2.left);
         if (Input.GetKeyDown(KeyCode.Space)) Jump();
