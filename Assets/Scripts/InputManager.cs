@@ -5,7 +5,7 @@ public class InputManager : MonoBehaviour
 {
     public static InputManager Instance { get; private set; }
 
-    [SerializeField] private List<int> actionRecord = new List<int>();
+    private List<int> actionRecord = new List<int>();
 
     private bool isRecord;
     private bool isReplay;

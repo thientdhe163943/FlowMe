@@ -23,10 +23,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] protected float speed = 5f;
 
     private Vector2 targetPosition;
-    protected PlayerState currentState;
+    public PlayerState currentState;
 
     private bool isMoving;
     private bool canMove;
+    private bool facingRight = true;
 
     protected virtual void Start()
     {
@@ -71,6 +72,7 @@ public class PlayerController : MonoBehaviour
     {
         MoveStep(dir);
         currentState = PlayerState.Moving;
+        Flip(dir.x);
     }
 
     protected void Jump()
@@ -145,5 +147,16 @@ public class PlayerController : MonoBehaviour
         canMove = false;
 
         inputManager.StopRecord();
+    }
+
+    public void Flip(float moveInput)
+    {
+        if (moveInput > 0 && !facingRight || moveInput < 0 && facingRight)
+        {
+            facingRight = !facingRight;
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
     }
 }
