@@ -62,10 +62,27 @@ public class PlayerController : MonoBehaviour
         if (!canMove)
             return;
 
-        if (Input.GetKeyDown(KeyCode.D)) Move(Vector2.right);
-        if (Input.GetKeyDown(KeyCode.A)) Move(Vector2.left);
-        if (Input.GetKeyDown(KeyCode.Space)) Jump();
-        if (Input.GetKeyDown(KeyCode.LeftShift) && currentState == PlayerState.Climb) MoveStep(Vector2.down);
+        // 0: Left - 1: Right - 2: Jump/Climb Up - 3: Climb Down 
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Move(Vector2.right);
+            inputManager.AddAction(0);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Move(Vector2.left);
+            inputManager.AddAction(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+            inputManager.AddAction(2);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift) && currentState == PlayerState.Climb)
+        {
+            MoveStep(Vector2.down);
+            inputManager.AddAction(3);
+        }
     }
 
     protected void Move(Vector2 dir)

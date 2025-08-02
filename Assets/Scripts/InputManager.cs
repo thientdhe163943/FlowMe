@@ -16,32 +16,8 @@ public class InputManager : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
-    }
 
-    private void Start()
-    {
         StartRecord();
-    }
-
-    private void Update()
-    {
-        Recording();
-    }
-
-    private void Recording()
-    {
-        if (!isRecord)
-            return;
-
-        // 0: Left - 1: Right - 2: Jump/Climb Up - 3: Climb Down 
-        if (Input.GetKeyDown(KeyCode.D))
-            actionRecord.Add(0);
-        if (Input.GetKeyDown(KeyCode.A))
-            actionRecord.Add(1);
-        if (Input.GetKeyDown(KeyCode.Space))
-            actionRecord.Add(2);
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-            actionRecord.Add(3);
     }
 
     private void StartRecord()
@@ -56,6 +32,8 @@ public class InputManager : MonoBehaviour
     }
 
     public bool GetIsReplay() => isReplay;
+
+    public void AddAction(int action) => actionRecord.Add(action);
 
     public List<int> GetListInputs()
     {
