@@ -172,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstancleLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
   climbLayer:
     serializedVersion: 2
     m_Bits: 64

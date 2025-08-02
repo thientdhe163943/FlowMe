@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         canMove = true;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (isMoving)
         {
