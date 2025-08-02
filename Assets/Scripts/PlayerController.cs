@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum PlayerState
@@ -10,20 +11,31 @@ public enum PlayerState
 }
 public class PlayerController : MonoBehaviour
 {
+    protected InputManager inputManager;
+
+    [Header("Layer Mask")]
     [SerializeField] private LayerMask obstancleLayer;
     [SerializeField] private LayerMask climbLayer;
-
+    [SerializeField] protected LayerMask endPointLayer;
+    [Space]
+    [Header("Player Setting")]
     [SerializeField] private float stepDistance = 1;
-    [SerializeField] private float speed = 5f;
+    [SerializeField] protected float speed = 5f;
+
     private Vector2 targetPosition;
+    protected PlayerState currentState;
 
     private bool isMoving;
-    private PlayerState currentState;
+    private bool canMove;
 
-    private void Start()
+    protected virtual void Start()
     {
+        inputManager = InputManager.Instance;
+
         targetPosition = transform.position;
         currentState = PlayerState.Idle;
+
+        canMove = true;
     }
 
     private void Update()
@@ -40,24 +52,28 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        EndControl();
         SetInput();
     }
 
-    private void SetInput()
+    protected virtual void SetInput()
     {
+        if (!canMove)
+            return;
+
         if (Input.GetKeyDown(KeyCode.D)) Move(Vector2.right);
         if (Input.GetKeyDown(KeyCode.A)) Move(Vector2.left);
         if (Input.GetKeyDown(KeyCode.Space)) Jump();
         if (Input.GetKeyDown(KeyCode.LeftShift) && currentState == PlayerState.Climb) MoveStep(Vector2.down);
     }
 
-    private void Move(Vector2 dir)
+    protected void Move(Vector2 dir)
     {
         MoveStep(dir);
         currentState = PlayerState.Moving;
     }
 
-    private void Jump()
+    protected void Jump()
     {
         MoveStep(Vector2.up);
         if (currentState != PlayerState.Jumping)
@@ -78,7 +94,7 @@ public class PlayerController : MonoBehaviour
             isMoving = false;
         }
     }
-    private void MoveStep(Vector2 dir)
+    protected void MoveStep(Vector2 dir)
     {
         if (Physics2D.Raycast(transform.position, dir, stepDistance, obstancleLayer))
         {
@@ -115,5 +131,19 @@ public class PlayerController : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(transform.position, .1f, climbLayer))
             currentState = PlayerState.Climb;
+    }
+
+    protected virtual void EndControl()
+    {
+        if (canMove == false)
+            return;
+
+        if (!Physics2D.OverlapCircle(transform.position, .1f, endPointLayer))
+            return;
+
+        currentState = PlayerState.Idle;
+        canMove = false;
+
+        inputManager.StopRecord();
     }
 }
