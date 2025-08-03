@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject lostPanel;
 
     public bool isWin;
-    private bool isLost;
+    public bool isLost;
 
     private void Awake()
     {
@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     {
         isWin = true;
         winPanel.SetActive(true);
-        winPanel.GetComponent<AudioSource>().Play();
         Time.timeScale = 0;
     }
 
@@ -35,7 +34,6 @@ public class GameManager : MonoBehaviour
     {
         isLost = true;
         lostPanel.SetActive(true);
-        lostPanel.GetComponent<AudioSource>().Play();
         Time.timeScale = 0;
     }
 

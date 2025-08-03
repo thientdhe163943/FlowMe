@@ -206,7 +206,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4f256865d0834fc42b69734edad93ed7, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -718,7 +718,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 71b23c68f38450640874848b6532a84b, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -6385,6 +6385,7 @@ MonoBehaviour:
   winPanel: {fileID: 36683674}
   lostPanel: {fileID: 205313444}
   isWin: 0
+  isLost: 0
 --- !u!1 &1150604978
 GameObject:
   m_ObjectHideFlags: 0
