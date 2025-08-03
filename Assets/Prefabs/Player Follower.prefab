@@ -182,7 +182,7 @@ MonoBehaviour:
   stepDistance: 1
   speed: 20
   currentState: 0
-  duration: 10
+  duration: 5
 --- !u!50 &4744771873668303294
 Rigidbody2D:
   serializedVersion: 4
