@@ -27,4 +27,9 @@ public class Setting_Ui : MonoBehaviour
             creditsUI.SetActive(true);
         }
     }
+
+    public void Help()
+    {
+        Application.OpenURL("https://youtu.be/mtftHUww7rQ");
+    }
 }

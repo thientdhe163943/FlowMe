@@ -73,12 +73,12 @@ public class PlayerController : MonoBehaviour
             Move(Vector2.left);
             inputManager.AddAction(1);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             Jump();
             inputManager.AddAction(2);
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift) && currentState == PlayerState.Climb)
+        if (Input.GetKeyDown(KeyCode.S))
         {
             MoveStep(Vector2.down);
             inputManager.AddAction(3);
