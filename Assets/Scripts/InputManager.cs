@@ -5,6 +5,8 @@ public class InputManager : MonoBehaviour
 {
     public static InputManager Instance { get; private set; }
 
+    [SerializeField] private Game_UI ui;
+
     private List<int> actionRecord = new List<int>();
 
     private bool isRecord;
@@ -33,7 +35,11 @@ public class InputManager : MonoBehaviour
 
     public bool GetIsReplay() => isReplay;
 
-    public void AddAction(int action) => actionRecord.Add(action);
+    public void AddAction(int action)
+    {
+        actionRecord.Add(action);
+        ui.ChangeStepCount(actionRecord.Count);
+    }
 
     public List<int> GetListInputs()
     {

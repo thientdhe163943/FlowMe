@@ -14,8 +14,6 @@ public class PlayerFollower : PlayerController
     protected override void Update()
     {
         base.Update();
-        if (Input.GetKeyDown(KeyCode.P))
-            StartFollow();
 
     }
 
@@ -26,13 +24,16 @@ public class PlayerFollower : PlayerController
             return;
         inputDatas = inputManager.GetListInputs();
 
+        StartCoroutine(DelayFollower(1));
+
         if (!isFollower)
             return;
         StartCoroutine(followCo(inputDatas));
     }
 
-    private void StartFollow()
+    private IEnumerator DelayFollower(float duration)
     {
+        yield return new WaitForSeconds(duration);
         isFollower = true;
     }
 
@@ -56,11 +57,13 @@ public class PlayerFollower : PlayerController
 
     protected override void EndControl()
     {
+        if (!GameManager.Instance.GetIsPlay())
+            return;
         if (!Physics2D.OverlapCircle(transform.position, .1f, endPointLayer))
             return;
         currentState = PlayerState.Idle;
 
-        Debug.Log("You win");
+        GameManager.Instance.WinLevel();
     }
 
 }
