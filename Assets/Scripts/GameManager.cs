@@ -57,10 +57,7 @@ public class GameManager : MonoBehaviour
 
     public void ExitGame()
     {
-        if (EditorApplication.isPlaying)
-            EditorApplication.isPlaying = false;
-        else
-            Application.Quit();
+        Application.Quit();
     }
 
     public bool GetIsPlay()
