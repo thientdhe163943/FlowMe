@@ -13,7 +13,7 @@ public class Game_UI : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     private void Start()
     {
-        ChangeStepCount(0);
+        ChangeStepCount(InputManager.Instance.maxStep);
     }
 
     private void Update()

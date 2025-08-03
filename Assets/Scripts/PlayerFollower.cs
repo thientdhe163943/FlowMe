@@ -14,7 +14,15 @@ public class PlayerFollower : PlayerController
     protected override void Update()
     {
         base.Update();
+    }
 
+    private void CheckLost()
+    {
+        if (currentAction >= inputDatas.Count && !GameManager.Instance.isWin)
+        {
+            GameManager.Instance.LostLevel();
+            return;
+        }
     }
 
     protected override void SetInput()
@@ -28,6 +36,7 @@ public class PlayerFollower : PlayerController
 
         if (!isFollower)
             return;
+        CheckLost();
         StartCoroutine(followCo(inputDatas));
     }
 

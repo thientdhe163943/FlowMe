@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Setting_Ui : MonoBehaviour
@@ -26,5 +27,4 @@ public class Setting_Ui : MonoBehaviour
             creditsUI.SetActive(true);
         }
     }
-
 }

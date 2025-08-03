@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject lostPanel;
 
-    private bool isWin;
+    public bool isWin;
     private bool isLost;
 
     private void Awake()
@@ -20,20 +18,24 @@ public class GameManager : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+
+        Time.timeScale = 1;
     }
+
 
     public void WinLevel()
     {
         isWin = true;
         winPanel.SetActive(true);
+        winPanel.GetComponent<AudioSource>().Play();
         Time.timeScale = 0;
-
     }
 
     public void LostLevel()
     {
         isLost = true;
-        lostPanel.SetActive(false);
+        lostPanel.SetActive(true);
+        lostPanel.GetComponent<AudioSource>().Play();
         Time.timeScale = 0;
     }
 
