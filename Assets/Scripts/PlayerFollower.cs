@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerFollower : PlayerController
 {
     [Header("Following Details")]
-    [SerializeField] private float duration = 10f;
+    [SerializeField] private float duration = 0.1f;
 
     private List<int> inputDatas;
     private int currentAction = 0;
