@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,10 +126,10 @@ TextureImporter:
       name: Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_0
       rect:
         serializedVersion: 2
-        x: 2212
-        y: 2112
-        width: 18
-        height: 32
+        x: 1369
+        y: 2273
+        width: 22
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,6 +139,216 @@ TextureImporter:
       bones: []
       spriteID: f6a9ce1b9d163f648ad53dd089ab1773
       internalID: -1612886582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_1
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 2273
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9e635c65722c84e97af2870d025aea
+      internalID: -1047748590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_2
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 2273
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621985c36ef6d104f9272d4912f220a4
+      internalID: 542175786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_3
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 2273
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c442abd643c317044a3498cf938810ce
+      internalID: 1260162629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_4
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 2273
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecad801e0a1b6e449864d6839380267
+      internalID: -1833117070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_5
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 2273
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ab8be34cf83cb4bbd0d8872f630488
+      internalID: -1869057178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_6
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 2273
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2261569e8dc46784a8d5b16fc8ff3121
+      internalID: -2035215812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_7
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 2273
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f500ed71f0363ff42a9cf4c43a08cbc0
+      internalID: 463872021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_8
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 2273
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce747b90d1f4f184782b610b370c9610
+      internalID: -2004720367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_9
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 2273
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f09dbe8456a4b64dae4c53b7ecb314c
+      internalID: -1914567195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_10
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 2273
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fb969fdca91aa4d977b7c45422bba0
+      internalID: 637963539
       vertices: []
       indices: 
       edges: []
@@ -155,6 +365,16 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_0: -1612886582
+      Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_1: -1047748590
+      Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_10: 637963539
+      Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_2: 542175786
+      Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_3: 1260162629
+      Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_4: -1833117070
+      Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_5: -1869057178
+      Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_6: -2035215812
+      Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_7: 463872021
+      Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_8: -2004720367
+      Whimsy_Hallow_Dungeon_Asset_Pack_V1.62_9: -1914567195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
