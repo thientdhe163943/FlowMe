@@ -7,6 +7,7 @@ public class Setting_Ui : MonoBehaviour
 {
     [SerializeField] private GameObject settingsUI;
     [SerializeField] private GameObject creditsUI;
+    [SerializeField] private GameObject helpUI;
 
     public void BackToMenu(GameObject ui)
     {
@@ -20,16 +21,19 @@ public class Setting_Ui : MonoBehaviour
         {
             settingsUI.SetActive(true);
             creditsUI.SetActive(false);
+            helpUI.SetActive(false);
         }
         else if (ui == creditsUI)
         {
             settingsUI.SetActive(false);
             creditsUI.SetActive(true);
+            helpUI.SetActive(false);
         }
-    }
-
-    public void Help()
-    {
-        Application.OpenURL("https://youtu.be/mtftHUww7rQ");
+        else
+        {
+            settingsUI.SetActive(false);
+            creditsUI.SetActive(false);
+            helpUI.SetActive(true);
+        }
     }
 }
